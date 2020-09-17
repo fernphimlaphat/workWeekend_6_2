@@ -47,7 +47,7 @@ int main()
 	printf("Enter number : ");
 	scanf_s("%d", &num);
 	num1 = num;
-	if (num >= 0) 
+	if (num > 0 || num == 0) 
 	{
 		Sum(num);
 	}
@@ -59,7 +59,7 @@ int main()
 		} while (num < 0);
 
 
-			if (num >= 0) 
+			if (num > 0 || num == 0)
 			{
 				Sum(num);
 
