@@ -15,13 +15,12 @@ int Multi(int num)
 	return sum;
 }
 
-int main()
+int Sum(int num)
 {
-	int num, i, sum = 0, num1;
-	printf("Enter number : ");
-	scanf_s("%d", &num);
+	int i, sum = 0, num1;
+	/*printf("Enter number : ");
+	scanf_s("%d", &num);*/
 	num1 = num;
-	if (num >= 0) {
 		do
 		{
 			Multi(num);
@@ -39,34 +38,31 @@ int main()
 		}
 		printf("%d!", num1);
 		printf(" = %d", sum);
+		return sum;
+}
+
+int main()
+{
+	int num , num1;
+	printf("Enter number : ");
+	scanf_s("%d", &num);
+	num1 = num;
+	if (num >= 0) 
+	{
+		Sum(num);
 	}
 	else
 	{
 		do {
 			printf("Try again : ");
 			scanf_s("%d", &num);
-			num1 = num;
 		} while (num < 0);
 
 
-			if (num >= 0) {
-				do
-				{
-					Multi(num);
-					//printf("%d ", Multi(num));
-					sum += Multi(num);
-					num--;
+			if (num >= 0) 
+			{
+				Sum(num);
 
-				} while (num > 0);
-
-				printf("1! + ");
-
-				for (int i = 2; i < num1; i++)
-				{
-					printf("%d! + ", i);
-				}
-				printf("%d!", num1);
-				printf(" = %d", sum);
 			}
 		
 		
